@@ -1,0 +1,10 @@
+<div class="absolute-footer" style="text-align:center;">
+    <h1>
+        <?php
+        if (!$customer->isEmpty())
+            echo "Customer :" . $customer->getName();
+        ?>
+    </h1>
+    <?php /* @escapeNotVerified */
+    echo $block->getMiscellaneousHtml(); ?>
+</div>

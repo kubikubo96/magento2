@@ -1,0 +1,13 @@
+<label><?= __("Data retrieved from Block is ") ?></label>
+<h1><?= $block->getText() ?></h1>
+
+<?php
+$block->getCatalogSession()->setMyName('Mageplaza');
+echo '<h1>' . $block->getCatalogSession()->getMyName() . '</h1><br />'; // output: Mageplaza
+
+$block->getCheckoutSession()->setTestData('Hello World');
+echo '<h1>' . $block->getCheckoutSession()->getTestData() . '</h1><br />'; // output: Hello World
+
+$block->getCheckoutSession()->setTestHello('Test Hello Value');
+echo '<h1>' . $block->getCheckoutSession()->getTestHello() . '</h1><br />'; // output: Test Hello Value
+?>

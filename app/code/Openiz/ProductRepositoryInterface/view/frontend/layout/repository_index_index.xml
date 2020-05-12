@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Openiz\ProductRepositoryInterface\Block\Product"
+                   name="repository" template="Product_Repository_Interface::repotest.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

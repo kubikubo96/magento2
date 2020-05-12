@@ -1,0 +1,29 @@
+<h2><?php echo __('Comment Post') ?></h2>
+
+<ul class="blog-post-list" id="data">
+</ul>
+<hr>
+
+<ul class="blog-post-list">
+    <?php
+    /** @var \OpenTechiz\Blog\Model\Comment $comment */
+    foreach ($block->getComments() as $comment):
+        if ($comment->getIsActive() == 1) {
+            ?>
+
+            <li class="blog-post-list-item">
+                <h3 class="blog-post-item-title">
+                    <?php echo $block->getNameUser($comment->getCustomerId()); ?>
+                </h3>
+
+                <div class="blog-post-item-content">
+                    <?php echo $comment->getComment(); ?>
+                </div>
+
+                <div class="blog-post-item-meta">
+                    <strong><?php echo __('Create at: ') ?></strong> <?php echo $comment->getCreatedAt() ?>
+                </div>
+            </li>
+        <?php }
+    endforeach; ?>
+</ul>
